@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Overlay from "@/components/Overlay";
 
 export const metadata: Metadata = {
   title: "Faris",
@@ -13,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[var(--background)] text-[var(--foreground)] flex justify-center">
-        {children}
+      <body className="bg-[var(--background)] text-[var(--foreground)] relative">
+        <Overlay />
+        <Navbar />
+        <div className="flex justify-center">{children}</div>
       </body>
     </html>
   );

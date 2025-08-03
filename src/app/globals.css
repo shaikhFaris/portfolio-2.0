@@ -4,10 +4,35 @@
 :root {
   --foreground: #e2e8f0;
   --background: #121212;
-  --secondary:#a2a2a2;
+  --secondary:#797979;
+  --border:#292929;
+  --card:#171717;
   --font-sans: "Outfit", sans-serif;
 }
 
 body{
   font: var(--font-sans);
+}
+
+.overlay{
+  background: linear-gradient(to bottom,transparent 90%,#121212 );
+}
+
+/* logo carousel */
+.logo-div{
+  white-space: nowrap;
+}
+.logo-slide{
+  animation: slide 10s infinite linear;
+}
+.logo-div:hover .logo-slide{
+  animation-play-state: paused;
+}
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
 }

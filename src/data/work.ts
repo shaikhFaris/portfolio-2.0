@@ -7,11 +7,11 @@ const work = [
     date: "May '25 - June '25",
   },
   {
-    img: "/digital-creation.jpg",
+    img: "/RohumLogo.png",
     title: "Rohum | Frontend Developer",
     details:
-      "Developed a frontend interface, integrated with backend. Built a system to generate dynamic urls and QR codes for company referrals.",
-    date: "May '25 - June '25",
+      "Designed and Developed an awesome landing page for the startup. Added GSAP/Framer animations and 3D touch using R3f. Also developed a simple email sending server.",
+    date: "March '25 - May '25",
   },
 ];
 
