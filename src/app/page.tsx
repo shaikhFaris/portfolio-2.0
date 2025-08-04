@@ -1,3 +1,4 @@
+import Projects from "@/components/Projects";
 import Tech from "@/components/Tech";
 import work from "@/data/work";
 import Image from "next/image";
@@ -47,6 +48,10 @@ export default function Home() {
       <div className="mt-8">
         <h3 className="font-medium mb-4 text-lg">Tech I use</h3>
         <Tech />
+      </div>
+      <div className="mt-8">
+        <h3 className="font-medium mb-4 text-lg">Cool Projects</h3>
+        <Projects />
       </div>
       <div className="h-screen"></div>
     </div>
