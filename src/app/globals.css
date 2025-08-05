@@ -36,3 +36,8 @@ body{
     transform: translateX(-50%);
   }
 }
+
+.xterm-screen{
+  height: 80vh !important;
+  padding: 15px;
+}
