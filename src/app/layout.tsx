@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Overlay from "@/components/Overlay";
+import { HiTerminal } from "react-icons/hi";
+import BTerminal from "@/components/Terminal";
 
 export const metadata: Metadata = {
   title: "Faris",
@@ -16,8 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[var(--background)] text-[var(--foreground)] relative">
-        <Overlay />
+        <BTerminal />
         <Navbar />
+        <Overlay />
+        <div className="fixed z-40 text-4xl bottom-3 right-3">
+          <HiTerminal />
+        </div>
+        {/* Main body content */}
         <div className="flex justify-center">{children}</div>
       </body>
     </html>

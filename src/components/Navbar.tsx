@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="sticky top-4 flex items-center justify-center w-full">
+    <div className="sticky z-40 top-3 flex items-center justify-center w-full">
       <div className="py-2 shadow-black shadow-2xl px-5 rounded-full bg-[var(--foreground)] top-2 text-[var(--background)] flex items-center justify-center gap-5">
         <Image
           alt="home-logo"
