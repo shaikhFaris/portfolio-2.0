@@ -10,7 +10,7 @@ export default function Typewriter() {
 
   return (
     <>
-      <p className="">
+      <p className="text-sm md:text-base">
         $ <span className="">{text}</span>
         <Cursor />
       </p>
