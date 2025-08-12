@@ -5,11 +5,11 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   return (
-    <div className="flex justify-between flex-wrap">
+    <div className="flex gap-10 justify-between flex-wrap">
       {projects.length !== 0 &&
         projects.map((el, i) => (
           <div
-            className="w-11/12 md:w-[48%] p-3 bg-[var(--card)] rounded-2xl relative"
+            className="w-full md:w-[48%] p-3 bg-[var(--card)] rounded-2xl relative"
             key={i}
           >
             {/* add blurring later */}
@@ -27,14 +27,14 @@ export default function Projects() {
                 <a target="_blank" className="text-sm" href={el.wLink}>
                   <div className="flex items-center gap-2">
                     <FaLink />
-                    <p>repo link</p>
+                    <p className="hover:underline underline-offset-4">Live link</p>
                   </div>
                 </a>
               )}
               <a target="_blank" className="text-sm" href={el.gLink}>
                 <div className="flex items-center gap-2">
                   <FaGithub />
-                  <p>repo link</p>
+                  <p className="hover:underline underline-offset-4">Repo link</p>
                 </div>
               </a>
             </div>

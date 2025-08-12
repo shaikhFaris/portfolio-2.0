@@ -18,12 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[var(--background)] text-[var(--foreground)] relative">
-        <BTerminal />
+        {/* <BTerminal /> */}
         <Navbar />
         <Overlay />
-        <div className="fixed z-40 text-4xl bottom-3 right-3">
+        {/* <div className="fixed z-40 text-[35px] bottom-3 right-3">
           <HiTerminal />
-        </div>
+        </div> */}
         {/* Main body content */}
         <div className="flex justify-center">{children}</div>
       </body>
