@@ -2,6 +2,7 @@ import ProjectSection from "@/sections/ProjectSection";
 import About from "@/sections/About";
 import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
+import Footer from "@/sections/Footer";
 
 export default function page() {
   return (
@@ -10,7 +11,7 @@ export default function page() {
       <Experience />
       <Skills />
       <ProjectSection />
-      <div className="h-screen"></div>
+      <Footer />
     </div>
   );
 }

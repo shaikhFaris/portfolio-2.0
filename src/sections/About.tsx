@@ -3,13 +3,12 @@ import Typewriter from "@/components/Typewriter";
 
 export default function About() {
   return (
-    <div>
+    <section>
       <div className="mt-[10vh] items-center justify-between flex">
         <h1 className="text-2xl md:text-5xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
         </h1>
         <div className="border min-w-[10%] border-[var(--border)] bg-[var(--card)] px-4 text-lg font-mono py-2 rounded-md ">
-          {/* npm install resume */}
           <Typewriter />
         </div>
       </div>
@@ -33,6 +32,6 @@ export default function About() {
           </a>
         </p>
       </div>
-    </div>
+    </section>
   );
 }

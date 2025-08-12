@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Experience() {
   return (
-    <div>
+    <section>
       <div className="mt-8">
         <h3 className="font-medium text-lg">I Worked At</h3>
         <div className="mt-2">
@@ -32,6 +32,6 @@ export default function Experience() {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
