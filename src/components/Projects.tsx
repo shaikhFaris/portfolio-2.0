@@ -5,11 +5,11 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   return (
-    <div className="flex gap-10 justify-between flex-wrap">
+    <div className="flex justify-between flex-wrap">
       {projects.length !== 0 &&
         projects.map((el, i) => (
           <div
-            className="w-full md:w-[48%] p-3 bg-[var(--card)] rounded-2xl relative"
+            className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl relative"
             key={i}
           >
             {/* add blurring later */}

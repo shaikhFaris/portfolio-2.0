@@ -9,24 +9,31 @@ export default function Experience() {
         <div className="mt-2">
           {work.length !== 0 &&
             work.map((el, i) => (
-              <div key={i} className="flex mb-5 justify-between">
-                <div className="flex justify-center w-3/4 gap-3 items-start">
-                  <Image
-                    alt="Logo"
-                    height={45}
-                    className="rounded-full border border-[var(--border)] "
-                    width={45}
-                    src={el.img}
-                  ></Image>
-                  <div className="w-full">
-                    <h3 className="font-medium">{el.title}</h3>
-                    <p className="text-sm md:text-base text-[var(--secondary)]">
-                      {el.details}
-                    </p>
+              <div key={i}>
+                <div className="flex mb-5 justify-between">
+                  <div className="flex justify-center w-full md:w-3/4 gap-3 items-start">
+                    <Image
+                      alt="Logo"
+                      height={45}
+                      className="rounded-full border border-[var(--border)] "
+                      width={45}
+                      src={el.img}
+                    ></Image>
+                    <div className="w-full">
+                      <h3 className="font-medium">
+                        {el.title}{" "}
+                        <span className="text-xs text-[var(--secondary)] md:hidden">
+                          [{el.date}]
+                        </span>
+                      </h3>
+                      <p className="text-sm md:text-base text-[var(--secondary)]">
+                        {el.details}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="">
-                  <p className="text-xs text-right md:text-sm">{el.date}</p>
+                  <div className="hidden md:block">
+                    <p className="text-xs text-right md:text-sm">{el.date}</p>
+                  </div>
                 </div>
               </div>
             ))}
