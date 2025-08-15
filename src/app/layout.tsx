@@ -8,7 +8,7 @@ import Overlay from "@/components/Overlay";
 export const metadata: Metadata = {
   title: "Faris - Software Engineer",
   description:
-    "I am a software developer who loves to build and explore. I am skilled in full stack development and have experience working on it too. I am currently engaged in learning to build low level software.",
+    "I am a software developer, skilled in building amazing websites. Currently learning real software dev. I love docker btw.",
 };
 
 export default function RootLayout({
