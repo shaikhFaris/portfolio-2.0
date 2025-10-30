@@ -1,5 +1,5 @@
 import projects from "@/data/projects";
-import { FaLink } from "react-icons/fa";
+import { FaLink, FaDesktop } from "react-icons/fa";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 
@@ -12,6 +12,12 @@ export default function Projects() {
             className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl relative"
             key={i}
           >
+            {el.name === "Dandoo" && (
+              <div className="absolute right-1/2 border border-[var(--border)] px-3 py-1 rounded-full bg-[var(--card)] top-0 translate-x-1/2 text-xs flex items-center justify-center gap-2">
+                <FaDesktop className="text-sm" />
+                <p>Built for big screens</p>
+              </div>
+            )}
             {/* add blurring later */}
             <Image
               src={el.img}
