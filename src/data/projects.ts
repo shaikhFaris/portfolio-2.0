@@ -8,6 +8,14 @@ interface ProjectType {
 
 const projects: ProjectType[] = [
   {
+    img: "/proj-imgs/prop.png",
+    name: "Proplance",
+    gLink: "https://github.com/shaikhFaris/proplance",
+    wLink: "https://proplance.vercel.app",
+    details:
+      "A freelance proposal builder that lets users quickly create, and download professional proposals as PDFs to close clients faster.",
+  },
+  {
     img: "/proj-imgs/yami.png",
     name: "Yami UI",
     gLink: "https://github.com/shaikhFaris/yami-ui",
