@@ -36,7 +36,7 @@ export default function ArchLoader({
   }, []);
 
   return (
-    <div className="h-full bg-[var(--background)] absolute z-40 w-full font-mono pt-[20vh] text-sm">
+    <div className="h-full text-xs md:text-sm bg-[var(--background)] absolute z-40 w-full font-mono pt-[16vh]">
       <div>
         {output.map((line, i) => (
           <motion.div
