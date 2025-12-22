@@ -1,4 +1,4 @@
-import ProjectLoaders from "@/loaders/ProjectLoaders";
+import ProjectLoaders from "@/components/loaders/ProjectLoaders";
 import Projects from "@/components/Projects";
 import { Suspense } from "react";
 

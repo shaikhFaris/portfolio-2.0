@@ -1,4 +1,4 @@
-import projects from "@/data/projects";
+import projects from "@/lib/data/projects";
 import { FaLink, FaDesktop } from "react-icons/fa";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";

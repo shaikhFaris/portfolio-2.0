@@ -4,7 +4,7 @@ import Typewriter from "@/components/Typewriter";
 export default function About() {
   return (
     <section>
-      <div className="mt-[10vh] items-center justify-between flex">
+      <div className="mt-[16vh] items-center justify-between flex">
         <h1 className="text-2xl md:text-5xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
         </h1>

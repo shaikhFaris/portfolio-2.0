@@ -1,17 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [projectEL, setProjectEl] = useState<Element | null>(null);
-
-  useEffect(() => {
-    setProjectEl(document.body.querySelector("#project-section"));
-  }, []);
-
   return (
-    <div className="sticky z-40 top-3 flex items-center justify-center w-full">
+    <div className="fixed z-30 top-3 flex items-center justify-center w-full">
       <div className="py-2 shadow-black shadow-2xl px-5 rounded-full bg-[var(--foreground)] top-2 text-[var(--background)] flex items-center justify-center gap-6">
         <Image
           onClick={() => {
@@ -28,7 +21,7 @@ export default function Navbar() {
         />
         <Image
           onClick={() => {
-            projectEL?.scrollIntoView({
+            document.body.querySelector("#project-section")?.scrollIntoView({
               behavior: "smooth",
             });
           }}

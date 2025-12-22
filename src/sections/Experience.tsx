@@ -1,4 +1,4 @@
-import work from "@/data/work";
+import work from "@/lib/data/work";
 import Image from "next/image";
 
 export default function Experience() {

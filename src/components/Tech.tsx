@@ -1,5 +1,5 @@
 import Image from "next/image";
-import tech from "@/data/tech";
+import tech from "@/lib/data/tech";
 
 export default function Tech() {
   return (
