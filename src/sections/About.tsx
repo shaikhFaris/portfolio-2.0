@@ -1,9 +1,9 @@
-import Heading from "@/components/Heading";
 import Typewriter from "@/components/Typewriter";
+import { motion } from "motion/react";
 
 export default function About() {
   return (
-    <section>
+    <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
       <div className="mt-[16vh] items-center justify-between flex">
         <h1 className="text-2xl md:text-5xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
@@ -32,6 +32,16 @@ export default function About() {
           </a>
         </p>
       </div>
-    </section>
+      <div className="flex items-center mt-3 justify-start gap-4">
+        <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">
+          <p className="bg-red-500 rounded-full size-2"></p>
+          <p>Open for work</p>
+        </div>
+        <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">
+          <p className="bg-green-500 rounded-full size-2"></p>
+          <p>Open to freelance</p>
+        </div>
+      </div>
+    </motion.section>
   );
 }
