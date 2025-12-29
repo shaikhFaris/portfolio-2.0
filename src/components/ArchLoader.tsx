@@ -31,7 +31,7 @@ export default function ArchLoader({
         setBooted(true);
         clearInterval(interval);
       }
-    }, 350); // terminal-like delay
+    }, 200); // terminal-like delay
     return () => clearInterval(interval);
   }, []);
 
