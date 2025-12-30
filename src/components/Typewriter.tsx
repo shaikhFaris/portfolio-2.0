@@ -4,7 +4,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Typewriter() {
   const [text] = useTypewriter({
-    words: ["npm run resume", "pacman -S resume", "apt install resume"],
+    words: ["npm run resume", "pacman -S resume"],
     loop: 0,
   });
 
