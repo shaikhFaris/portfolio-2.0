@@ -9,8 +9,8 @@ interface WorkProps {
 const work: WorkProps[] = [
   {
     isWorking: true,
-    img: "/digital-creation.jpg",
-    title: "NAAH SON, Dont be smart",
+    img: "/cncmllcLogo.jpg",
+    title: "CNCM | Frontend Developer Intern",
     details:
       "Building user experiences with functionality. Integrated and optimized backend API connections, implementing efficient data fetching strategies and error handling mechanisms.",
     date: "Dec '25 - Present",

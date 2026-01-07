@@ -22,24 +22,17 @@ export default function Experience() {
               >
                 <div className="flex mb-5 justify-between">
                   <div className="flex justify-center w-full md:w-3/4 gap-3 items-start">
-                    {el.isWorking ? (
-                      <div className="size-[42px] flex items-center justify-center border border-[var(--border)] rounded-full bg-[var(--card)] ">
-                        <FaBuilding />
-                      </div>
-                    ) : (
-                      <Image
-                        alt="Logo"
-                        height={40}
-                        className="rounded-full border border-[var(--border)] "
-                        width={40}
-                        src={el.img}
-                      ></Image>
-                    )}
+                    <Image
+                      alt="Logo"
+                      height={40}
+                      className="rounded-full border border-[var(--border)] "
+                      width={40}
+                      src={el.img}
+                    ></Image>
                     <div className="w-full">
                       <h3 className="font-medium">
-                        <span className={`${el.isWorking && "blur-[5px]"}`}>
-                          {el.title}{" "}
-                        </span>
+                        {/* <span className={`${el.isWorking && "blur-[5px]"}`}> */}
+                        {el.title} {/* </span> */}
                         <span className="text-xs text-[var(--secondary)] md:hidden">
                           [{el.date}]
                         </span>
