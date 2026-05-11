@@ -34,7 +34,7 @@ export default function About() {
       </div>
       <div className="flex items-center mt-3 justify-start gap-4">
         <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">
-          <p className="bg-red-500 rounded-full size-2"></p>
+          <p className="bg-green-500 rounded-full size-2"></p>
           <p>Open for work</p>
         </div>
         <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">

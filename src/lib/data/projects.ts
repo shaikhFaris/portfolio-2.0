@@ -8,6 +8,14 @@ interface ProjectType {
 
 const projects: ProjectType[] = [
   {
+    img: "/proj-imgs/accifio.png",
+    name: "Accifio",
+    gLink: "https://github.com/shaikhFaris/accifio",
+    wLink: "https://accifio.xyz",
+    details:
+      "Accifio lets you build and deploy a beautiful personal website in minutes. Just add your data and go live.",
+  },
+  {
     img: "/proj-imgs/prop.png",
     name: "Proplance",
     gLink: "https://github.com/shaikhFaris/proplance",

@@ -13,7 +13,7 @@ const work: WorkProps[] = [
     title: "CNCM | Frontend Developer Intern",
     details:
       "Building user experiences with functionality. Integrated and optimized backend API connections, implementing efficient data fetching strategies and error handling mechanisms.",
-    date: "Dec '25 - Present",
+    date: "Dec '25 - March '26",
   },
   {
     isWorking: false,
