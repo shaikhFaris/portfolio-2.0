@@ -8,6 +8,7 @@ import Footer from "@/sections/Footer";
 import { useState } from "react";
 import ArchLoader from "@/components/ArchLoader";
 import { AnimatePresence, motion } from "motion/react";
+import LandingPageSection from "@/components/LandingPage";
 
 export default function Home() {
   const [booted, setBooted] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
           <Experience />
           <Skills />
           <ProjectSection />
+          <LandingPageSection />
           <Footer />
         </motion.div>
       )}
