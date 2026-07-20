@@ -16,6 +16,14 @@ const projects: ProjectType[] = [
       "Accifio lets you build and deploy a beautiful personal website in minutes. Just add your data and go live.",
   },
   {
+    img: "/proj-imgs/sms.png",
+    name: "SMS Campaign Processing System",
+    gLink: "https://github.com/shaikhFaris/sms-campaign-processing-system",
+    wLink: null,
+    details:
+      "Async CSV contact processing pipeline with live WebSocket progress, duplicate-safe upserts, and crash-resumable jobs, plus a distributed Redis rate limiter",
+  },
+  {
     img: "/proj-imgs/prop.png",
     name: "Proplance",
     gLink: "https://github.com/shaikhFaris/proplance",
