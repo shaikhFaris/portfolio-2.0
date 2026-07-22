@@ -75,7 +75,7 @@ function LandingPage() {
         <div className="flex justify-center -mt-4">
           <button
             onClick={handleToggle}
-            className="text-sm border border-[var(--border)] px-4 py-1.5 rounded-md hover:bg-[var(--card)] transition-colors"
+            className="text-xs md:text-sm border border-[var(--border)] px-4 py-1.5 rounded-md hover:bg-[var(--card)] transition-colors"
           >
             {expanded ? "Show Less" : "View More"}
           </button>

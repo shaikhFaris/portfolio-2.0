@@ -4,6 +4,7 @@ interface ProjectType {
   gLink: string;
   wLink: string | null;
   details: string;
+  tag: "product" | "adv backend";
 }
 
 const projects: ProjectType[] = [
@@ -14,6 +15,7 @@ const projects: ProjectType[] = [
     wLink: "https://accifio.xyz",
     details:
       "Accifio lets you build and deploy a beautiful personal website in minutes. Just add your data and go live.",
+    tag: "product",
   },
   {
     img: "/proj-imgs/sms.png",
@@ -21,7 +23,8 @@ const projects: ProjectType[] = [
     gLink: "https://github.com/shaikhFaris/sms-campaign-processing-system",
     wLink: null,
     details:
-      "Async CSV contact processing pipeline with live WebSocket progress, duplicate-safe upserts, and crash-resumable jobs, plus a distributed Redis rate limiter",
+      "Async CSV campaign processing pipeline with live WebSocket progress, and crash-resumable jobs, plus a distributed Redis rate limiter.",
+    tag: "adv backend",
   },
   {
     img: "/proj-imgs/prop.png",
@@ -30,6 +33,7 @@ const projects: ProjectType[] = [
     wLink: "https://proplance.vercel.app",
     details:
       "A freelance proposal builder that lets users quickly create, and download professional proposals as PDFs to close clients faster.",
+    tag: "product",
   },
   {
     img: "/proj-imgs/yami.png",
@@ -38,6 +42,7 @@ const projects: ProjectType[] = [
     wLink: "https://yami-ui.vercel.app",
     details:
       "React shader background components right out of the box to add some seriously cool vibes to your website.",
+    tag: "product",
   },
   {
     img: "/proj-imgs/bb.png",
@@ -46,6 +51,7 @@ const projects: ProjectType[] = [
     wLink: "https://binary-blogs-ten.vercel.app",
     details:
       "A cool and minimal website for blogging, distraction free. Built using MERN stack with JWT authentication. Also has a cool landing page.",
+    tag: "product",
   },
   // {
   //   img: "/proj-imgs/bot.png",

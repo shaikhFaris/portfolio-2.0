@@ -14,6 +14,11 @@ body{
   font: var(--font-sans);
 }
 
+::selection {
+  background-color: #292929; 
+  color: white;              
+}
+
 .overlay{
   background: linear-gradient(to bottom,transparent 90%,#121212 );
 }

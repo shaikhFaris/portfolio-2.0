@@ -3,12 +3,12 @@ import { motion } from "motion/react";
 export default function About() {
   return (
     <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-      <div className="mt-[16vh] items-center justify-between flex">
-        <h1 className="text-2xl md:text-5xl font-semibold">
+      <div className="mt-[20vh] items-center justify-between flex">
+        <h1 className="text-2xl md:text-4xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
         </h1>
       </div>
-      <div className="mt-4 md:mt-8">
+      <div className="mt-4 md:mt-6">
         <h3 className="font-medium mb-1 text-lg">About me</h3>
         <p className="text-sm md:text-base text-[var(--secondary)]">
           I am a developer from Bangalore, India. I love building cool stuff and enjoy

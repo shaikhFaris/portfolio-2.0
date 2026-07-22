@@ -2,7 +2,6 @@
 import work from "@/lib/data/work";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { FaBuilding } from "react-icons/fa";
 
 export default function Experience() {
   return (
@@ -21,7 +20,7 @@ export default function Experience() {
                 }}
               >
                 <div className="flex mb-5 justify-between">
-                  <div className="flex justify-center w-full md:w-3/4 gap-3 items-start">
+                  <div className="flex justify-center w-full gap-3 items-start">
                     <Image
                       alt="Logo"
                       height={40}
@@ -30,20 +29,21 @@ export default function Experience() {
                       src={el.img}
                     ></Image>
                     <div className="w-full">
-                      <h3 className="font-medium">
-                        {/* <span className={`${el.isWorking && "blur-[5px]"}`}> */}
-                        {el.title} {/* </span> */}
-                        <span className="text-xs text-[var(--secondary)] md:hidden">
-                          [{el.date}]
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-medium">
+                          {el.title}
+                          <span className="text-xs md:hidden whitespace-nowrap ml-2 text-[var(--secondary)] ">
+                            [{el.date}]
+                          </span>
+                        </h3>
+                        <span className="text-xs md:text-sm hidden md:inline">
+                          {el.date}
                         </span>
-                      </h3>
-                      <p className="text-sm md:text-base text-[var(--secondary)]">
+                      </div>
+                      <p className="text-sm md:text-base leading-tight text-[var(--secondary)]">
                         {el.details}
                       </p>
                     </div>
-                  </div>
-                  <div className="hidden md:block">
-                    <p className="text-xs text-right md:text-sm">{el.date}</p>
                   </div>
                 </div>
               </motion.div>

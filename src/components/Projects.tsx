@@ -1,84 +1,139 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 import projects from "@/lib/data/projects";
-import { FaLink, FaDesktop } from "react-icons/fa";
+import { FaLink, FaDesktop, FaGithub } from "react-icons/fa";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+
+type Filter = "all" | (typeof projects)[number]["tag"];
+
+const filters: Filter[] = [
+  "all",
+  ...Array.from(new Set(projects.map((project) => project.tag))),
+];
 
 export default function Projects() {
   const VISIBLE_COUNT = 2;
+
+  const [selectedFilter, setSelectedFilter] = useState<Filter>("all");
   const [expanded, setExpanded] = useState(false);
-  const visibleProjects = expanded ? projects : projects.slice(0, VISIBLE_COUNT);
+
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const filteredProjects = useMemo(() => {
+    return selectedFilter === "all"
+      ? projects
+      : projects.filter((project) => project.tag === selectedFilter);
+  }, [selectedFilter]);
+
+  const visibleProjects = useMemo(() => {
+    return expanded ? filteredProjects : filteredProjects.slice(0, VISIBLE_COUNT);
+  }, [filteredProjects, expanded]);
+
+  // Collapse whenever the filter changes
+  useEffect(() => {
+    setExpanded(false);
+  }, [selectedFilter]);
 
   const handleToggle = () => {
     if (expanded) {
-      // collapsing: scroll the section into view first so the
-      // shrinking height doesn't yank the viewport around
-      containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      containerRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
+
     setExpanded((prev) => !prev);
   };
 
   return (
     <div ref={containerRef} className="scroll-mt-24">
-      <div className="flex justify-between flex-wrap">
+      <div className="flex items-center justify-start gap-2">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setSelectedFilter(filter)}
+            className={`px-2.5 py-1 rounded-md text-xs md:text-sm mb-4 capitalize transition-colors border
+              ${
+                selectedFilter === filter
+                  ? "bg-[var(--foreground)] text-[var(--background)] border-[var(--foreground)]"
+                  : "border-[var(--border)] hover:bg-[var(--card)]"
+              }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex flex-wrap justify-between">
         <AnimatePresence initial={false}>
-          {visibleProjects.length !== 0 &&
-            visibleProjects.map((el, i) => (
-              <motion.div
-                key={el.name ?? i}
-                layout
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-                className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl relative"
-              >
-                {el.name === "Dandoo" && (
-                  <div className="absolute right-1/2 border border-[var(--border)] px-3 py-1 rounded-full bg-[var(--card)] top-0 translate-x-1/2 text-xs flex items-center justify-center gap-2">
-                    <FaDesktop className="text-sm" />
-                    <p>Built for big screens</p>
-                  </div>
-                )}
-                {/* add blurring later */}
-                <Image
-                  src={el.img}
-                  alt="binary-blogs-img"
-                  width={800}
-                  height={600}
-                  className="w-full rounded-2xl h-auto"
-                />
-                <h3 className="font my-1">{el.name}</h3>
-                <p className="text-[var(--secondary)] leading-5 text-sm ">{el.details}</p>
-                <div className="flex items-center gap-5 mt-2">
-                  {el.wLink && (
-                    <a target="_blank" className="text-sm" href={el.wLink}>
-                      <div className="flex items-center gap-2">
-                        <FaLink />
-                        <p className="hover:underline underline-offset-4">Live link</p>
-                      </div>
-                    </a>
-                  )}
-                  <a target="_blank" className="text-sm" href={el.gLink}>
+          {visibleProjects.map((el) => (
+            <motion.div
+              key={el.name}
+              layout
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl relative"
+            >
+              {el.name === "Dandoo" && (
+                <div className="absolute right-1/2 top-0 translate-x-1/2 border border-[var(--border)] px-3 py-1 rounded-full bg-[var(--card)] text-xs flex items-center gap-2">
+                  <FaDesktop className="text-sm" />
+                  <p>Built for big screens</p>
+                </div>
+              )}
+
+              <Image
+                src={el.img}
+                alt={el.name}
+                width={800}
+                height={600}
+                className="w-full rounded-2xl h-auto"
+              />
+
+              <h3 className="font my-1">{el.name}</h3>
+
+              <p className="text-[var(--secondary)] leading-5 text-sm">{el.details}</p>
+
+              <div className="flex items-center gap-5 mt-2">
+                {el.wLink && (
+                  <a
+                    href={el.wLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm"
+                  >
                     <div className="flex items-center gap-2">
-                      <FaGithub />
-                      <p className="hover:underline underline-offset-4">Repo link</p>
+                      <FaLink />
+                      <p className="hover:underline underline-offset-4">Live link</p>
                     </div>
                   </a>
-                </div>
-              </motion.div>
-            ))}
+                )}
+
+                <a
+                  href={el.gLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm"
+                >
+                  <div className="flex items-center gap-2">
+                    <FaGithub />
+                    <p className="hover:underline underline-offset-4">Repo link</p>
+                  </div>
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </AnimatePresence>
       </div>
 
-      {projects.length > VISIBLE_COUNT && (
+      {filteredProjects.length > VISIBLE_COUNT && (
         <div className="flex justify-center -mt-4">
           <button
             onClick={handleToggle}
-            className="text-sm border border-[var(--border)] px-4 py-1.5 rounded-md hover:bg-[var(--card)] transition-colors"
+            className="text-xs md:text-sm border border-[var(--border)] px-4 py-1.5 rounded-md hover:bg-[var(--card)] transition-colors"
           >
             {expanded ? "Show Less" : "View More"}
           </button>
