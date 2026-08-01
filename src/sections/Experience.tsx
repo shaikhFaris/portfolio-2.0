@@ -2,13 +2,15 @@
 import work from "@/lib/data/work";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Heading from "@/components/Heading";
+import { playSound } from "@/lib/hover-sound";
 
 export default function Experience() {
   return (
     <section>
-      <div className="mt-8">
-        <h3 className="font-medium text-lg">I Worked At</h3>
-        <div className="mt-2">
+      <div className="mt-4">
+        <Heading>I Worked At</Heading>
+        <div>
           {work.length !== 0 &&
             work.map((el, i) => (
               <motion.div
@@ -23,24 +25,22 @@ export default function Experience() {
                   <div className="flex justify-center w-full gap-3 items-start">
                     <Image
                       alt="Logo"
-                      height={40}
+                      height={35}
                       className="rounded-full border border-[var(--border)] "
-                      width={40}
+                      width={35}
                       src={el.img}
                     ></Image>
                     <div className="w-full">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-medium">
+                        <h3 className="font-medium text-sm">
                           {el.title}
                           <span className="text-xs md:hidden whitespace-nowrap ml-2 text-[var(--secondary)] ">
                             [{el.date}]
                           </span>
                         </h3>
-                        <span className="text-xs md:text-sm hidden md:inline">
-                          {el.date}
-                        </span>
+                        <span className="md:text-[13px] hidden md:inline">{el.date}</span>
                       </div>
-                      <p className="text-sm md:text-base leading-tight text-[var(--secondary)]">
+                      <p className="text-sm leading-tight text-[var(--secondary)]">
                         {el.details}
                       </p>
                     </div>

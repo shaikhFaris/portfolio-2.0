@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
+import "@/app/globals.css";
+// import Navbar from "@/components/Navbar";
 import Overlay from "@/components/Overlay";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -38,11 +38,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-[var(--background)] text-[var(--foreground)] relative">
         {/* <BTerminal /> */}
-        <Navbar />
+        {/* <Navbar /> */}
         <Overlay />
         {/* <div className="fixed z-40 text-[35px] bottom-3 right-3">
           <HiTerminal />
         </div> */}
+
         <div className="flex justify-center">
           {children}
           <Analytics />

@@ -44,10 +44,10 @@ const tech: TechInfoType[] = [
     logo: "/tech-logos/redis.svg",
     name: "Redis",
   },
-  {
-    logo: "/tech-logos/go.svg",
-    name: "Go",
-  },
+  // {
+  //   logo: "/tech-logos/go.svg",
+  //   name: "Go",
+  // },
   {
     logo: "/tech-logos/btea.svg",
     name: "Bubble Tea",

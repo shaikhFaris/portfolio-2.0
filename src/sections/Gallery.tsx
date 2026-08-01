@@ -1,10 +1,13 @@
+"use client";
+
 import ComponentGallery from "@/components/component-showcase/ComponentGallery";
+import Heading from "@/components/Heading";
 import gallery from "@/lib/data/gallery";
 
 export default function GallerySection() {
   return (
     <section id="gallery-showcase" className="mt-8">
-      <h3 className="font-medium mb-4 text-lg">Gallery</h3>
+      <Heading>Gallery</Heading>
 
       <ComponentGallery items={gallery} />
     </section>

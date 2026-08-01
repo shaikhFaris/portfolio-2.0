@@ -14,7 +14,7 @@ const projects: ProjectType[] = [
     gLink: "https://github.com/shaikhFaris/accifio",
     wLink: "https://accifio.xyz",
     details:
-      "Accifio lets you build and deploy a beautiful personal website in minutes. Just add your data and go live.",
+      "Accifio lets you build and deploy a beautiful personal website designed by the best design engineers, in minutes. Just add your data and go live.",
     tag: "product",
   },
   {

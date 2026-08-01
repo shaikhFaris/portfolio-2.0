@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --foreground: #e2e8f0;
-  --background: #121212;
-  --secondary:#797979;
-  --border:#292929;
-  --card:#171717;
-  --font-sans: "Outfit", sans-serif;
+  --foreground: #eceae4;
+  --background: #121110;
+  --secondary:#9a968c;
+  --border:#2a2824;
+  --card:#1a1815;
+  --card-hover:#23201c;
+  --font-sans: "Inter", sans-serif;
 }
 
 body{

@@ -1,42 +1,80 @@
+"use client";
+import { playSound } from "@/lib/hover-sound";
 import { motion } from "motion/react";
 
 export default function About() {
   return (
     <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-      <div className="mt-[20vh] items-center justify-between flex">
-        <h1 className="text-2xl md:text-4xl font-semibold">
+      <div className="mt-[20vh] items-center justify-start flex gap-4">
+        <h1 className="text-xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
         </h1>
       </div>
-      <div className="mt-4 md:mt-6">
-        <h3 className="font-medium mb-1 text-lg">About me</h3>
-        <p className="text-sm md:text-base text-[var(--secondary)]">
-          I am a developer from Bangalore, India. I love building cool stuff and enjoy
-          learning CS ( I am obsessed with docker). I have a great sense of{" "}
-          <span className="text-[var(--foreground)]">web designing</span> which you will
-          notice as you go through my work. I have worked on{" "}
-          <span className="text-[var(--foreground)]">
-            freelance projects and interned
-          </span>{" "}
-          at amazing places. Btw I am open to work and freelance, just{" "}
+      <div className="mt-2">
+        <p className="text-sm">
+          I am a software engineer based in Bangalore, India. I love building cool stuff
+          and reading tech blogs. I have recently built{" "}
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=sheikhfaris86@gmail.com"
+            href="https://www.accifio.xyz/"
             target="_blank"
-            className="text-[var(--foreground)] hover:underline underline-offset-4 hover:cursor-pointer "
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+            onMouseEnter={() => playSound("tap")}
           >
-            contact me.
+            accifio
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://github.com/shaikhFaris/sms-campaign-processing-system"
+            target="_blank"
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+            onMouseEnter={() => playSound("tap")}
+          >
+            sms-campaign-system
           </a>
+          . Currently I am diving deep into production grade backends and distributed
+          systems.
         </p>
-      </div>
-      <div className="flex items-center mt-3 justify-start gap-4">
-        <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">
-          <p className="bg-green-500 rounded-full size-2"></p>
-          <p>Open for work</p>
-        </div>
-        <div className="border flex items-center justify-center gap-2 border-[var(--border)] text-xs md:text-sm py-1.5 px-3 rounded-md bg-[var(--card)] w-fit">
-          <p className="bg-green-500 rounded-full size-2"></p>
-          <p>Open to freelance</p>
-        </div>
+        <p className="text-[var(--secondary)] mt-3 text-sm">
+          Btw I also have a great{" "}
+          <span
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-default hover:brightness-150"
+            onMouseEnter={() => playSound("tap")}
+          >
+            Taste in Design
+          </span>{" "}
+          which you will notice as you go through my work. I design in figma and then ship
+          it with cool animations.
+        </p>
+        <p className="text-[var(--secondary)] mt-3 text-sm">
+          Let&apos;s have a talk on{" "}
+          <a
+            href="https://www.linkedin.com/in/shaikh-mohammad-faris-561550295"
+            target="_blank"
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+            onMouseEnter={() => playSound("tap")}
+          >
+            Linkedin
+          </a>
+          ,{" "}
+          <a
+            href="https://www.linkedin.com/in/shaikh-mohammad-faris-561550295"
+            target="_blank"
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+            onMouseEnter={() => playSound("tap")}
+          >
+            X
+          </a>{" "}
+          or{" "}
+          <a
+            href="https://www.linkedin.com/in/shaikh-mohammad-faris-561550295"
+            target="_blank"
+            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer "
+            onMouseEnter={() => playSound("tap")}
+          >
+            email
+          </a>
+          .
+        </p>
       </div>
     </motion.section>
   );

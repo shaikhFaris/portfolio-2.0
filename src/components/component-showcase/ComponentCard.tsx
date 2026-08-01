@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import type { ComponentShowcase } from "@/lib/data/gallery";
+import { playSound } from "@/lib/hover-sound";
 
 interface ComponentCardProps {
   item: ComponentShowcase;
@@ -66,9 +67,12 @@ export default function ComponentCard({ item }: ComponentCardProps) {
     <motion.article
       ref={cardRef}
       tabIndex={0}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={() => {
+        playSound("hover");
+        setIsHovered(true);
+      }}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl"
+      className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl hover:bg-[var(--card-hover)] hover:cursor-default"
     >
       <div className="relative w-full h-full rounded-2xl overflow-hidden">
         {hasVideo ? (
@@ -95,7 +99,7 @@ export default function ComponentCard({ item }: ComponentCardProps) {
           />
         )}
       </div>
-      <h3 className="mt-2 ml-2">{item.title}</h3>
+      <h3 className="mt-2 ml-2 text-sm">{item.title}</h3>
     </motion.article>
   );
 }

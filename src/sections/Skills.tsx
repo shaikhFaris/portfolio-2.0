@@ -1,3 +1,5 @@
+"use client";
+
 import Heading from "@/components/Heading";
 import Tech from "@/components/Tech";
 
