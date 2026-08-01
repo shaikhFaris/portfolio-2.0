@@ -1,14 +1,28 @@
 "use client";
 import { playSound } from "@/lib/hover-sound";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { ThinkingOrb } from "thinking-orbs";
 
 export default function About() {
+  const [currentDate, setCurrentDate] = useState("");
+  useEffect(() => {
+    const date = new Date();
+
+    const formattedDate = `${String(date.getDate()).padStart(2, "0")}.${String(
+      date.getMonth() + 1,
+    ).padStart(2, "0")}.${date.getFullYear()}`;
+
+    setCurrentDate(formattedDate);
+  }, []);
   return (
     <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-      <div className="mt-[15vh] md:mt-[20vh] items-center justify-start flex gap-4">
-        <h1 className="text-xl font-semibold">
-          Hi, I am <span className="text-white">Faris</span>
-        </h1>
+      <div className="mt-[15vh] md:mt-[20vh] items-center justify-start flex">
+        <ThinkingOrb state="composing" size={64} />
+        <div className="">
+          <h1 className="text-xl font-semibold">Faris</h1>
+          <p className="text-xs text-[var(--secondary)]">{currentDate}</p>
+        </div>
       </div>
       <div className="mt-2">
         <p className="text-sm">
@@ -31,7 +45,14 @@ export default function About() {
           >
             sms-campaign-system
           </a>
-          . Currently I am diving deep into production grade backends and distributed
+          .{" "}
+          <span className="hidden md:inline">
+            Currently I am diving deep into production grade backends and distributed
+            systems.
+          </span>
+        </p>
+        <p className="mt-3 text-sm block md:hidden">
+          Currently I am diving deep into production grade backends and distributed
           systems.
         </p>
         <p className="text-[var(--secondary)] mt-3 text-sm">
@@ -42,8 +63,10 @@ export default function About() {
           >
             Taste in Design
           </span>{" "}
-          which you will notice as you go through my work. I design in figma and then ship
-          it with cool animations.
+          which you will notice as you go through my work.{" "}
+          <span className="hidden md:inline">
+            I design in figma and then ship it with cool animations.
+          </span>
         </p>
         <p className="text-[var(--secondary)] mt-3 text-sm">
           Let&apos;s have a talk on{" "}
