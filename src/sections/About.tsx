@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export default function About() {
   return (
     <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-      <div className="mt-[20vh] items-center justify-start flex gap-4">
+      <div className="mt-[15vh] md:mt-[20vh] items-center justify-start flex gap-4">
         <h1 className="text-xl font-semibold">
           Hi, I am <span className="text-white">Faris</span>
         </h1>
