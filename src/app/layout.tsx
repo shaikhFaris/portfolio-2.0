@@ -8,7 +8,30 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://farix.xyz"),
   title: "Faris - Software Engineer",
   description:
-    "I am a software developer, skilled in building amazing websites. Currently learning real software dev. I love docker btw.",
+    "I am a software engineer, skilled in building cool stuff. Currently I am diving deep into production grade backends and distributed systems.",
+
+  openGraph: {
+    title: "Faris - Software Engineer",
+    description:
+      "I am a software engineer, skilled in building cool stuff. Currently I am diving deep into production grade backends and distributed systems.",
+    url: "https://farix.xyz",
+    siteName: "Faris",
+    images: [
+      {
+        url: "/opengraph-image.png", // put this inside public/
+        width: 1200,
+        height: 630,
+        alt: "Faris Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faris - Software Engineer",
+    description: "I am a software engineer, skilled in building cool stuff.",
+    images: ["/twitter-image.png"],
+  },
   keywords: [
     "Shaikh Mohammed Faris",
     "Faris",
