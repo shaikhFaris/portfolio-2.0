@@ -80,7 +80,7 @@ export default function About() {
           </a>
           ,{" "}
           <a
-            href="https://www.linkedin.com/in/shaikh-mohammad-faris-561550295"
+            href="https://x.com/faris_shaikh247"
             target="_blank"
             className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
             onMouseEnter={() => playSound("tap")}
@@ -89,7 +89,7 @@ export default function About() {
           </a>{" "}
           or{" "}
           <a
-            href="https://www.linkedin.com/in/shaikh-mohammad-faris-561550295"
+            href="https://mail.google.com/mail/u/0/?fs=1&to=sheikhfaris86@gmail.com&tf=cm"
             target="_blank"
             className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer "
             onMouseEnter={() => playSound("tap")}
