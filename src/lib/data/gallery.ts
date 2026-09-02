@@ -8,6 +8,12 @@ export interface ComponentShowcase {
 
 const gallery: ComponentShowcase[] = [
   {
+    title: "Game Ladder",
+    image: "/gallery/gameladder.png",
+    poster: "/gallery/gameladder.png",
+    video: "/gallery/gameladder.mp4",
+  },
+  {
     title: "Infinite Scroll",
     image: "/gallery/infinite-scroll.png",
     poster: "/gallery/infinite-scroll.png",
