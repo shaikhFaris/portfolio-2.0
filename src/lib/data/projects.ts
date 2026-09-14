@@ -1,7 +1,7 @@
 interface ProjectType {
   img: string;
   name: string;
-  gLink: string;
+  gLink?: string;
   wLink: string | null;
   details: string;
   tag: "product" | "adv backend";
@@ -9,9 +9,16 @@ interface ProjectType {
 
 const projects: ProjectType[] = [
   {
+    img: "/proj-imgs/unuzed.png",
+    name: "Unuzed",
+    wLink: "https://unuzed.fun",
+    details:
+      "Unuzed lets you turn unused AI credits into shipped work. Spend your expiring credits helping someone else finish a task, or post a task you don't have credits for.",
+    tag: "product",
+  },
+  {
     img: "/proj-imgs/accifio.png",
     name: "Accifio",
-    gLink: "https://github.com/shaikhFaris/accifio",
     wLink: "https://accifio.xyz",
     details:
       "Accifio lets you build and deploy a beautiful personal website designed by the best design engineers, in minutes. Just add your data and go live.",
@@ -44,15 +51,15 @@ const projects: ProjectType[] = [
       "React shader background components right out of the box to add some seriously cool vibes to your website.",
     tag: "product",
   },
-  {
-    img: "/proj-imgs/bb.png",
-    name: "Binary Blogs",
-    gLink: "https://github.com/shaikhFaris/Binary_Blogs",
-    wLink: "https://binary-blogs-ten.vercel.app",
-    details:
-      "A cool and minimal website for blogging, distraction free. Built using MERN stack with JWT authentication. Also has a cool landing page.",
-    tag: "product",
-  },
+  // {
+  //   img: "/proj-imgs/bb.png",
+  //   name: "Binary Blogs",
+  //   gLink: "https://github.com/shaikhFaris/Binary_Blogs",
+  //   wLink: "https://binary-blogs-ten.vercel.app",
+  //   details:
+  //     "A cool and minimal website for blogging, distraction free. Built using MERN stack with JWT authentication. Also has a cool landing page.",
+  //   tag: "product",
+  // },
   // {
   //   img: "/proj-imgs/bot.png",
   //   name: "Code Analayser Bot",

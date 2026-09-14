@@ -117,18 +117,19 @@ export default function Projects() {
                     </div>
                   </a>
                 )}
-
-                <a
-                  href={el.gLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[13px]"
-                >
-                  <div className="flex items-center gap-1">
-                    <FaGithub />
-                    <p className="hover:underline underline-offset-4">Repo link</p>
-                  </div>
-                </a>
+                {el.gLink && (
+                  <a
+                    href={el.gLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[13px]"
+                  >
+                    <div className="flex items-center gap-1">
+                      <FaGithub />
+                      <p className="hover:underline underline-offset-4">Repo link</p>
+                    </div>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
