@@ -5,8 +5,9 @@ import Experience from "@/sections/Experience";
 import Skills from "@/sections/Skills";
 import Footer from "@/sections/Footer";
 import SoundHint from "@/components/SoundHint";
+import type { ReactNode } from "react";
 
-export default function Home() {
+export default function Home({ children }: { children?: ReactNode }) {
   // const [booted, setBooted] = useState(false);
 
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <ProjectSection />
+      {children}
       <GallerySection />
       <Footer />
     </div>

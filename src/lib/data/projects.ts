@@ -13,7 +13,7 @@ const projects: ProjectType[] = [
     name: "Unuzed",
     wLink: "https://unuzed.fun",
     details:
-      "Unuzed lets you turn unused AI credits into shipped work. Spend your expiring credits helping someone else finish a task, or post a task you don't have credits for.",
+      "Unuzed lets you turn unused AI credits into shipped work. Spend your expiring credits helping someone else finish a task.",
     tag: "product",
   },
   {

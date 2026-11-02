@@ -58,7 +58,7 @@ export default function About() {
         <p className="text-[var(--secondary)] mt-3 text-sm">
           Btw I also have a great{" "}
           <span
-            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-default hover:brightness-150"
+            className="text-[var(--foreground)] hover:cursor-default hover:brightness-150"
             onMouseEnter={() => playSound("tap")}
           >
             Taste in Design
