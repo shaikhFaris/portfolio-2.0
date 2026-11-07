@@ -28,10 +28,10 @@ const tech: TechInfoType[] = [
     logo: "/tech-logos/tailwinf.svg",
     name: "Tailwind",
   },
-  {
-    logo: "/tech-logos/prsma.svg",
-    name: "Prisma",
-  },
+  // {
+  //   logo: "/tech-logos/prsma.svg",
+  //   name: "Prisma",
+  // },
   {
     logo: "/tech-logos/docker.svg",
     name: "Docker",
@@ -48,26 +48,26 @@ const tech: TechInfoType[] = [
   //   logo: "/tech-logos/go.svg",
   //   name: "Go",
   // },
-  {
-    logo: "/tech-logos/btea.svg",
-    name: "Bubble Tea",
-  },
+  // {
+  //   logo: "/tech-logos/btea.svg",
+  //   name: "Bubble Tea",
+  // },
   {
     logo: "/tech-logos/node.svg",
     name: "NodeJS",
   },
-  {
-    logo: "/tech-logos/git.svg",
-    name: "Git",
-  },
+  // {
+  //   logo: "/tech-logos/git.svg",
+  //   name: "Git",
+  // },
   {
     logo: "/tech-logos/postgresql.svg",
     name: "PostgreSQL",
   },
-  {
-    logo: "/tech-logos/c.svg",
-    name: "C",
-  },
+  // {
+  //   logo: "/tech-logos/c.svg",
+  //   name: "C",
+  // },
 ];
 
 export default tech;

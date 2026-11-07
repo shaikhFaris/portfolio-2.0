@@ -46,7 +46,7 @@ export default function Projects() {
 
   return (
     <div className="scroll-mt-24">
-      <div className="mx-auto flex w-[90%] max-w-screen-2xl items-center justify-start gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-[60%] xl:w-[55%]">
+      <div className="mx-auto flex w-[90%] max-w-screen-2xl items-center justify-start gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-[60%] xl:w-[55%]s">
         {filters.map((filter) => (
           <button
             key={filter}

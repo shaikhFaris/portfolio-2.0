@@ -30,7 +30,7 @@ export default function Experience() {
                             {el.role}
                           </p> */}
                         </h3>
-                        <span className="md:text-[13px] truncate text-[var(--secondary)]">
+                        <span className="text-xs md:text-[13px] truncate text-[var(--secondary)]">
                           {el.date}
                         </span>
                       </div>
