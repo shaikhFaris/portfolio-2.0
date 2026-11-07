@@ -11,7 +11,7 @@ export default function Home({ children }: { children?: ReactNode }) {
   // const [booted, setBooted] = useState(false);
 
   return (
-    <div className="w-[90%] max-w-screen-2xl md:w-4/5 lg:w-[60%] relative">
+    <div className="w-[90%] max-w-screen-2xl md:w-4/5 lg:w-[60%] xl:w-[55%] relative">
       <SoundHint />
       <About />
       <Experience />

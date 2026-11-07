@@ -13,7 +13,7 @@ export default function GallerySection() {
         id="gallery-showcase"
         className="relative left-1/2 mt-8 w-screen -translate-x-1/2"
       >
-        <div className="mx-auto w-[90%] max-w-screen-2xl md:w-4/5 lg:w-[60%]">
+        <div className="mx-auto w-[90%] max-w-screen-2xl md:w-4/5 lg:w-[60%] xl:w-[55%]">
           <Heading>Gallery</Heading>
         </div>
 
