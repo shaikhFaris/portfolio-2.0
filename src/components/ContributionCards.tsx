@@ -26,7 +26,7 @@ export default function ContributionCards({
   const reduceMotion = useReducedMotion();
 
   return (
-    <ul className="space-y-3">
+    <ul className="space-y-4">
       {contributions.map((contribution, index) => {
         const TypeIcon =
           contribution.type === "Pull Request" ? GoGitPullRequest : GoIssueOpened;
