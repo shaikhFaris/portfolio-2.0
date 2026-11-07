@@ -9,19 +9,19 @@ interface ProjectType {
 
 const projects: ProjectType[] = [
   {
-    img: "/proj-imgs/unuzed.png",
-    name: "Unuzed",
-    wLink: "https://unuzed.fun",
-    details:
-      "Unuzed lets you turn unused AI credits into shipped work. Spend your expiring credits helping someone else finish a task.",
-    tag: "product",
-  },
-  {
     img: "/proj-imgs/accifio.png",
     name: "Accifio",
     wLink: "https://accifio.xyz",
     details:
       "Accifio lets you build and deploy a beautiful personal website designed by the best design engineers, in minutes. Just add your data and go live.",
+    tag: "product",
+  },
+  {
+    img: "/proj-imgs/unuzed.png",
+    name: "Unuzed",
+    wLink: "https://unuzed.fun",
+    details:
+      "Unuzed lets you turn unused AI credits into shipped work. Spend your expiring credits helping someone else finish a task.",
     tag: "product",
   },
   {

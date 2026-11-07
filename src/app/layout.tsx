@@ -67,7 +67,7 @@ export default function RootLayout({
           <HiTerminal />
         </div> */}
 
-        <div className="flex justify-center">
+        <div className="flex justify-center overflow-hidden">
           {children}
           <Analytics />
         </div>

@@ -72,13 +72,13 @@ export default function ComponentCard({ item }: ComponentCardProps) {
         setIsHovered(true);
       }}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:w-[48%] mb-10 p-3 bg-[var(--card)] rounded-2xl hover:bg-[var(--card-hover)] hover:cursor-default"
+      className="flex w-[85cqw] max-w-[calc(100vw-2rem)] shrink-0 snap-start flex-col rounded-2xl bg-[var(--card)] p-2 hover:cursor-default hover:bg-[var(--card-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--foreground)] sm:w-[60cqw] sm:p-3 md:w-[48cqw]"
     >
-      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl sm:rounded-2xl">
         {hasVideo ? (
           <video
             ref={videoRef}
-            className="h-full w-full object-cover transition-transform duration-500 ease-out"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out motion-reduce:transition-none"
             src={item.video}
             poster={item.poster ?? item.image}
             autoPlay={!reduceMotion}
@@ -93,13 +93,15 @@ export default function ComponentCard({ item }: ComponentCardProps) {
           <Image
             src={item.poster ?? item.image}
             alt={`${item.title} preview image`}
-            width={800}
-            height={600}
-            className="w-full rounded-2xl h-full object-cover transition-transform duration-500 "
+            fill
+            sizes="(min-width: 1024px) 29vw, (min-width: 768px) 39vw, (min-width: 640px) 54vw, 77vw"
+            className="object-cover transition-transform duration-500 motion-reduce:transition-none"
           />
         )}
       </div>
-      <h3 className="mt-2 ml-2 text-sm">{item.title}</h3>
+      <h3 className="mt-2 px-1 text-xs leading-relaxed break-words sm:px-2 sm:text-sm">
+        {item.title}
+      </h3>
     </motion.article>
   );
 }
