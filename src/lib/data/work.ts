@@ -10,7 +10,7 @@ interface WorkProps {
 const work: WorkProps[] = [
   {
     isWorking: true,
-    img: "/cncmllcLogo.jpg",
+    img: "/cncmllcLogo.png",
     title: "CNCM",
     role: "Frontend Engineer (Part time)",
     details:

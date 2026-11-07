@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Heading from "@/components/Heading";
 import ContributionCards from "@/components/ContributionCards";
+import BlurReveal from "@/components/BlurReveal";
 import { getContributions } from "@/lib/github-contributions";
 
 function ContributionMessage({ children }: { children: React.ReactNode }) {
@@ -42,7 +43,12 @@ async function Contributions() {
 
 export default function OpenSourceContributions() {
   return (
-    <section id="open-source-contributions" className="mt-8">
+    <BlurReveal
+      as="section"
+      id="open-source-contributions"
+      className="mt-8"
+      order={4}
+    >
       <Heading>OSS Contributions</Heading>
       <Suspense
         fallback={
@@ -53,6 +59,6 @@ export default function OpenSourceContributions() {
       >
         <Contributions />
       </Suspense>
-    </section>
+    </BlurReveal>
   );
 }

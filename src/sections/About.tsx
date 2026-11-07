@@ -1,6 +1,6 @@
 "use client";
 import { playSound } from "@/lib/hover-sound";
-import { motion } from "motion/react";
+import BlurReveal from "@/components/BlurReveal";
 import { useEffect, useState } from "react";
 import { ThinkingOrb } from "thinking-orbs";
 
@@ -16,7 +16,7 @@ export default function About() {
     setCurrentDate(formattedDate);
   }, []);
   return (
-    <motion.section initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
+    <BlurReveal as="section">
       <div className="mt-[15vh] md:mt-[20vh] items-center justify-start flex">
         <ThinkingOrb state="composing" size={64} />
         <div className="">
@@ -99,6 +99,6 @@ export default function About() {
           .
         </p>
       </div>
-    </motion.section>
+    </BlurReveal>
   );
 }

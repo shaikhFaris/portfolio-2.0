@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GoGitPullRequest, GoIssueOpened } from "react-icons/go";
 import type { Contribution } from "@/lib/github-contributions";
@@ -23,22 +22,14 @@ export default function ContributionCards({
 }: {
   contributions: Contribution[];
 }) {
-  const reduceMotion = useReducedMotion();
-
   return (
     <ul className="space-y-4">
-      {contributions.map((contribution, index) => {
+      {contributions.map((contribution) => {
         const TypeIcon =
           contribution.type === "Pull Request" ? GoGitPullRequest : GoIssueOpened;
 
         return (
-          <motion.li
-            key={contribution.id}
-            initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.25, delay: index * 0.04 }}
-          >
+          <li key={contribution.id}>
             <a
               href={contribution.url}
               target="_blank"
@@ -71,7 +62,7 @@ export default function ContributionCards({
               </time>
               <span className="sr-only">View on GitHub (opens in a new tab)</span>
             </a>
-          </motion.li>
+          </li>
         );
       })}
     </ul>

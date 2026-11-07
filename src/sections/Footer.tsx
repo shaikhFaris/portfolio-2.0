@@ -1,9 +1,11 @@
+import BlurReveal from "@/components/BlurReveal";
+
 export default function Footer() {
   return (
-    <div className="mt-10 relative">
-      <p className="absolute left-1/2 pb-1 -translate-x-1/2 text-center z-50 mb-1 text-sm">
+    <BlurReveal className="relative z-40 mt-10 pb-6" order={6}>
+      <p className="text-center text-sm">
         Portfolio 2.0 © 2026 developed by Faris
       </p>
-    </div>
+    </BlurReveal>
   );
 }

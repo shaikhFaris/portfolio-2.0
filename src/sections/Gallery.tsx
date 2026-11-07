@@ -2,12 +2,13 @@
 
 import ComponentGallery from "@/components/component-showcase/ComponentGallery";
 import Heading from "@/components/Heading";
+import BlurReveal from "@/components/BlurReveal";
 import gallery from "@/lib/data/gallery";
 
 export default function GallerySection() {
   // Size cards against the portfolio column while the section spans the viewport.
   return (
-    <div className="@container">
+    <BlurReveal className="@container" order={5}>
       <section
         id="gallery-showcase"
         className="relative left-1/2 mt-8 w-screen -translate-x-1/2"
@@ -18,6 +19,6 @@ export default function GallerySection() {
 
         <ComponentGallery items={gallery} />
       </section>
-    </div>
+    </BlurReveal>
   );
 }
