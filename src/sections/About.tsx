@@ -3,6 +3,7 @@ import { playSound } from "@/lib/hover-sound";
 import BlurReveal from "@/components/BlurReveal";
 import { useEffect, useState } from "react";
 import { ThinkingOrb } from "thinking-orbs";
+import Image from "next/image";
 
 export default function About() {
   const [currentDate, setCurrentDate] = useState("");
@@ -24,36 +25,59 @@ export default function About() {
           <p className="text-xs text-[var(--secondary)]">{currentDate}</p>
         </div>
       </div>
-      <div className="mt-2">
+      <div className="mt-2 text-[var(--secondary)]">
         <p className="text-sm">
-          I am a software engineer based in Bangalore, India. I love building cool stuff
+          I am a full stack + ai engineer with high agency. I love building cool products
           and reading tech blogs. I have recently built{" "}
           <a
-            href="https://www.accifio.xyz/"
+            href="https://github.com/shaikhFaris/cloudterm"
             target="_blank"
             className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
             onMouseEnter={() => playSound("tap")}
           >
-            accifio
+            cloudterm
           </a>{" "}
           and{" "}
-          <a
-            href="https://github.com/shaikhFaris/sms-campaign-processing-system"
-            target="_blank"
-            className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+          <span className="inline-flex items-center gap-1 align-middle">
+            <Image src={"/accifio.png"} alt={"logo"} width={16} height={16} />
+            <a
+              href="https://www.accifio.xyz/"
+              target="_blank"
+              className="text-[var(--foreground)] underline underline-offset-4 hover:cursor-pointer hover:brightness-150"
+              onMouseEnter={() => playSound("tap")}
+            >
+              accifio
+            </a>
+          </span>{" "}
+          . Currently I am diving deep into{" "}
+          <span className="text-[var(--foreground)] ">backend and AI systems</span>.
+        </p>
+        <p className="text-[var(--secondary)] mt-3 text-sm">
+          I also{" "}
+          <span
+            className="text-[var(--foreground)] hover:cursor-default hover:brightness-150"
             onMouseEnter={() => playSound("tap")}
           >
-            sms-campaign-system
+            freelance
+          </span>{" "}
+          and have closed multiple freelance deals with clients who loved my work.
+          Let&apos;s build something cool or increase your conversion with a good landing
+          page. DM me on{" "}
+          <a
+            href="https://x.com/faris_shaikh247"
+            target="_blank"
+            onMouseEnter={() => playSound("tap")}
+            className="inline-flex invert"
+          >
+            <Image
+              src={"/x.svg"}
+              alt={"X"}
+              width={14}
+              height={16}
+              className="translate-y-0.25"
+            />
           </a>
-          .{" "}
-          <span className="hidden md:inline">
-            Currently I am diving deep into production grade backends and distributed
-            systems.
-          </span>
-        </p>
-        <p className="mt-3 text-sm block md:hidden">
-          Currently I am diving deep into production grade backends and distributed
-          systems.
+          .
         </p>
         <p className="text-[var(--secondary)] mt-3 text-sm">
           Btw I also have a great{" "}
@@ -63,9 +87,9 @@ export default function About() {
           >
             Taste in Design
           </span>{" "}
-          which you will notice as you go through my work.{" "}
+          which you will notice as you go through my work and{" "}
           <span className="hidden md:inline">
-            I design in figma and then ship it with cool animations.
+            I love to build in public and write about what I learn.
           </span>
         </p>
         <p className="text-[var(--secondary)] mt-3 text-sm">

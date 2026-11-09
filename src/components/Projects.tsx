@@ -46,7 +46,7 @@ export default function Projects() {
 
   return (
     <div className="scroll-mt-24">
-      <div className="mx-auto flex w-[90%] max-w-screen-2xl items-center justify-start gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-[60%] xl:w-[55%]s">
+      <div className="mx-auto flex w-[90%] max-w-screen-2xl items-center justify-start gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:w-4/5 lg:w-[60%] xl:w-[55%]">
         {filters.map((filter) => (
           <button
             key={filter}
@@ -156,7 +156,9 @@ export default function Projects() {
 
                 <h3 className="text-sm my-1">{el.name}</h3>
 
-                <p className="line-clamp-3 text-[var(--secondary)] text-[13px]">{el.details}</p>
+                <p className="line-clamp-3 text-[var(--secondary)] text-[13px]">
+                  {el.details}
+                </p>
 
                 <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-2">
                   {el.wLink && (

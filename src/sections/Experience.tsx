@@ -26,9 +26,9 @@ export default function Experience() {
                       <div className="flex items-center justify-between">
                         <h3 className="font-medium text-sm">
                           {el.title}
-                          {/* <p className="text-xs leading-tight text-[var(--secondary)]">
+                          <p className="text-xs leading-tight text-[var(--secondary)]">
                             {el.role}
-                          </p> */}
+                          </p>
                         </h3>
                         <span className="text-xs md:text-[13px] truncate text-[var(--secondary)]">
                           {el.date}
