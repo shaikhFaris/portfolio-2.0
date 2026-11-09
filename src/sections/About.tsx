@@ -26,7 +26,7 @@ export default function About() {
         </div>
       </div>
       <div className="mt-2 text-[var(--secondary)]">
-        <p className="text-sm">
+        <p className="text-sm text-pretty">
           I am a full stack + ai engineer with high agency. I love building cool products
           and reading tech blogs. I have recently built{" "}
           <a
@@ -52,7 +52,7 @@ export default function About() {
           . Currently I am diving deep into{" "}
           <span className="text-[var(--foreground)] ">backend and AI systems</span>.
         </p>
-        <p className="text-[var(--secondary)] mt-3 text-sm">
+        <p className="text-[var(--secondary)] mt-3 text-sm text-pretty">
           I also{" "}
           <span
             className="text-[var(--foreground)] hover:cursor-default hover:brightness-150"
@@ -79,7 +79,7 @@ export default function About() {
           </a>
           .
         </p>
-        <p className="text-[var(--secondary)] mt-3 text-sm">
+        <p className="text-[var(--secondary)] mt-3 text-sm text-pretty">
           Btw I also have a great{" "}
           <span
             className="text-[var(--foreground)] hover:cursor-default hover:brightness-150"
