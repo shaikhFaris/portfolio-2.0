@@ -145,14 +145,15 @@ export default function Projects() {
                   </div>
                 )}
 
-                <Image
-                  src={el.img}
-                  alt={el.name}
-                  width={800}
-                  height={600}
-                  sizes="(min-width: 1024px) 29vw, (min-width: 768px) 39vw, (min-width: 640px) 54vw, 77vw"
-                  className="w-full rounded-2xl h-auto"
-                />
+                <div className="relative aspect-[2/1] w-full shrink-0 overflow-hidden rounded-2xl">
+                  <Image
+                    src={el.img}
+                    alt={el.name}
+                    fill
+                    sizes="(min-width: 1024px) 29vw, (min-width: 768px) 39vw, (min-width: 640px) 54vw, 77vw"
+                    className="object-cover"
+                  />
+                </div>
 
                 <h3 className="text-sm my-1">{el.name}</h3>
 

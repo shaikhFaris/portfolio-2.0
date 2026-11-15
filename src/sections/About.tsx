@@ -27,8 +27,9 @@ export default function About() {
       </div>
       <div className="mt-2 text-[var(--secondary)]">
         <p className="text-sm text-pretty">
-          I am a full stack + ai engineer with high agency. I love building cool products
-          and reading tech blogs. I have recently built{" "}
+          I am a full stack + ai engineer with high agency.{" "}
+          <span>I love building cool products and reading tech blogs.</span> I have
+          recently built{" "}
           <a
             href="https://github.com/shaikhFaris/cloudterm"
             target="_blank"
@@ -62,24 +63,9 @@ export default function About() {
           </span>{" "}
           and have closed multiple freelance deals with clients who loved my work.
           Let&apos;s build something cool or increase your conversion with a good landing
-          page. DM me on{" "}
-          <a
-            href="https://x.com/faris_shaikh247"
-            target="_blank"
-            onMouseEnter={() => playSound("tap")}
-            className="inline-flex invert"
-          >
-            <Image
-              src={"/x.svg"}
-              alt={"X"}
-              width={14}
-              height={16}
-              className="translate-y-0.25"
-            />
-          </a>
-          .
+          page.
         </p>
-        <p className="text-[var(--secondary)] mt-3 text-sm text-pretty">
+        <p className="text-[var(--secondary)] hidden md:block  mt-3 text-sm text-pretty">
           Btw I also have a great{" "}
           <span
             className="text-[var(--foreground)] hover:cursor-default hover:brightness-150"
@@ -87,10 +73,8 @@ export default function About() {
           >
             Taste in Design
           </span>{" "}
-          which you will notice as you go through my work and{" "}
-          <span className="hidden md:inline">
-            I love to build in public and write about what I learn.
-          </span>
+          which you will notice as you go through my work and I love to build in public
+          and write about what I learn.
         </p>
         <p className="text-[var(--secondary)] mt-3 text-sm">
           Let&apos;s have a talk on{" "}

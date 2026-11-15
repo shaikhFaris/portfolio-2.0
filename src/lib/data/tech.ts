@@ -64,10 +64,10 @@ const tech: TechInfoType[] = [
     logo: "/tech-logos/postgresql.svg",
     name: "PostgreSQL",
   },
-  // {
-  //   logo: "/tech-logos/c.svg",
-  //   name: "C",
-  // },
+  {
+    logo: "/tech-logos/langchain.png",
+    name: "LangChain",
+  },
 ];
 
 export default tech;

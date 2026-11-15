@@ -17,22 +17,22 @@ export default function Experience() {
                   <div className="flex justify-center w-full gap-3 items-center">
                     <Image
                       alt="Logo"
-                      height={25}
+                      height={30}
                       className="rounded-sm"
-                      width={25}
+                      width={30}
                       src={el.img}
                     ></Image>
                     <div className="w-full">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-start justify-between">
                         <h3 className="font-medium text-sm">
                           {el.title}
                           <p className="text-xs leading-tight text-[var(--secondary)]">
                             {el.role}
                           </p>
                         </h3>
-                        <span className="text-xs md:text-[13px] truncate text-[var(--secondary)]">
+                        {/* <span className="text-xs md:text-[13px] truncate text-[var(--secondary)]">
                           {el.date}
-                        </span>
+                        </span> */}
                       </div>
                     </div>
                   </div>
